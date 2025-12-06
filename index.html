@@ -83,7 +83,10 @@
                         .md5 + "' target='_blank'>" + info[i].title + "</a></td>").appendTo(str);
                     
                     // Artist
-                    $("<td width='40%'>" + "本体" + "</td>").appendTo(str);
+                    $("<td width='40%'>" +  
+                      "<a href='http://" + info[
+                            i]
+                        .link + "' target='_blank'>" + info[i].title + "</a></td>").appendTo(str);
 
                     // Comment
                     $("<td width='10%'>" + info[i].comment + "</td>").appendTo(str);
