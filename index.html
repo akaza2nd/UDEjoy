@@ -83,12 +83,13 @@
                         .md5 + "' target='_blank'>" + info[i].title + "</a></td>").appendTo(str);
 
                     // Artist
+                    console.log("artist raw:", JSON.stringify(info[i].artist));
+
                     var artist = info[i].artist;
                     var artistHtml = artist;
 
                     if (typeof artist === "string" &&
                     (artist.startsWith("http://") || artist.startsWith("https://"))) {
-
                     artistHtml = "<a href='" + artist + "' target='_blank'>" + artist + "</a>";
                     }
 
