@@ -87,11 +87,12 @@
                     var artistHtml = artist;
 
                     if (typeof artist === "string" &&
-                        (artist.startsWith("http://") || artist.startsWith("https://"))) {
-                        artistHtml = "<a href='" + artist + "' target='_blank'>" + artist + "</a>";
+                    (artist.startsWith("http://") || artist.startsWith("https://"))) {
+
+                    artistHtml = "<a href='" + artist + "' target='_blank'>" + artist + "</a>";
                     }
 
-                    $("<td width='40%'>" + artistHtml + "</td>").appendTo(str);
+                    $("<td width='40%'>").html(artistHtml).appendTo(str);
 
                     // Comment
                     $("<td width='10%'>" + info[i].comment + "</td>").appendTo(str);
